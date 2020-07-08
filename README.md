@@ -1,5 +1,7 @@
 # spark_on_azure_batch_demo
-This is a demo that shows how to run Spark jobs on Azure Batch
+This is a demo that shows how to run Spark jobs on Azure Batch.
+
+**This code is NOT PRODUCTION READY!**
 
 The original code is from https://medium.com/datamindedbe/run-spark-jobs-on-azure-batch-using-azure-container-registry-and-blob-storage-10a60bd78f90 and respectively https://github.com/datamindedbe/spark_on_azure_batch_demo -> All credits go to him :)
 

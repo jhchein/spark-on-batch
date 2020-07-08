@@ -16,6 +16,7 @@ In your Azure Portal
 
 ### Environment
 * Create a python environment and install the requirements from requirements.txt ```pip install -r requirements.txt```
+* Install jupyter in your environment (```conda install -y jupyter``` or ```pip install jupyter```)
 
 ### Editor / IDE
 * Copy template.config.py to config.py and add your credetials and resource names
@@ -32,6 +33,11 @@ In your Azure Portal
 
 ### Jupyter
 * Run 'titanic-demo.ipynb' in jupyter notebook.
+* (optional) Check the logs ('stderr.txt') of a Task in Azure Portal
 
-### Teardown (optional)
+### Scaling and teardown
+When you're done, just scale the pool to zero (or delete). You can scale the pool via the Azure Portal manually or defining a function (autoscale). 
+
 You can delete jobs and pools via the jupyter notebook (last two lines) or the Azure Portal.
+
+You don't need to delete the Azure Resources in case you might need them later on.

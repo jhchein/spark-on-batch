@@ -1,0 +1,5 @@
+azure-batch
+azure-storage-blob
+azure-storage-file-datalake
+pyspark==2.4.0
+jupyter

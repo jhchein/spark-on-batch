@@ -1,0 +1,10 @@
+STORAGE_ACCOUNT_NAME = "sparkonbatch"
+STORAGE_ACCOUNT_KEY = ""
+
+BATCH_ACCOUNT_NAME = "sparkonbatch"
+BATCH_ACCOUNT_KEY = ""
+BATCH_ACCOUNT_URL = ""
+
+ACR_LOGINSERVER = "sparkonbatch.azurecr.io"
+ACR_USERNAME = ""
+ACR_PASSWORD = ""

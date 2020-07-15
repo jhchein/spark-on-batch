@@ -10,13 +10,8 @@ Clone this repo.
 
 ### Azure Portal
 [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fjhchein%2Fspark-on-batch-example%2Fadd-arm-template%2Fazuredeploy.json)
-
-In your Azure Portal
-* Create an azure batch account
-* Create a container registry
-* Create a storage account
-* Create a container called 'titanic' in your blob storage. Upload data/train.csv to that container.
-
+* Use the Deploy to Azure Button to deploy a batch account, container registry and storage account to your subscription. 
+* After succesful deployment navigate to your storage account -> container -> titanic and upload the train.csv from this repo.
 
 ### Environment
 * Create a python environment and install the requirements from requirements.txt ```pip install -r requirements.txt```

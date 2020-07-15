@@ -1,13 +1,18 @@
 {
     "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
-    "parameters": {},
+    "parameters": {
+        "containerName": {
+            "type": "string",
+            "defaultValue": "titanic"
+        }
+    },
     "functions": [],
     "variables": {
         "location": "[resourceGroup().location]",
-        "storageName": "[concat('batch-storage-', uniqueString(resourceGroup().id))]",
-        "batchServiceName": "[concat('batch-account-', uniqueString(resourceGroup().id))]",
-        "acrName": "[concat('batch-acr-', uniqueString(resourceGroup().id))]"
+        "storageName": "[concat('storage', uniqueString(resourceGroup().id))]",
+        "batchServiceName": "[concat('batch', uniqueString(resourceGroup().id))]",
+        "acrName": "[concat('acr', uniqueString(resourceGroup().id))]"
     },
     "resources": [
         {
@@ -47,38 +52,18 @@
             "name": "[variables('storageName')]",
             "location": "[variables('location')]",
             "sku": {
-                "name": "Standard_RAGRS",
+                "name": "Standard_LRS",
                 "tier": "Standard"
             },
             "kind": "StorageV2",
             "properties": {
-                "networkAcls": {
-                    "bypass": "AzureServices",
-                    "virtualNetworkRules": [],
-                    "ipRules": [],
-                    "defaultAction": "Allow"
-                },
-                "supportsHttpsTrafficOnly": true,
-                "encryption": {
-                    "services": {
-                        "file": {
-                            "keyType": "Account",
-                            "enabled": true
-                        },
-                        "blob": {
-                            "keyType": "Account",
-                            "enabled": true
-                        }
-                    },
-                    "keySource": "Microsoft.Storage"
-                },
                 "accessTier": "Hot"
             },
             "resources": [
                 {
-                    "type": "containers",
+                    "type": "blobServices/containers",
                     "apiVersion": "2019-06-01",
-                    "name": "default/titanic",
+                    "name": "[concat('default/', parameters('containerName'))]",
                     "dependsOn": [
                         "[variables('storageName')]"
                     ]

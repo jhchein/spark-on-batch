@@ -1,12 +1,7 @@
 {
     "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
-    "parameters": {
-        "containerName": {
-            "type": "string",
-            "defaultValue": "titanic"
-        }
-    },
+    "parameters": {},
     "functions": [],
     "variables": {
         "location": "[resourceGroup().location]",
@@ -63,7 +58,7 @@
                 {
                     "type": "blobServices/containers",
                     "apiVersion": "2019-06-01",
-                    "name": "[concat('default/', parameters('containerName'))]",
+                    "name": "default/titanic",
                     "dependsOn": [
                         "[variables('storageName')]"
                     ]

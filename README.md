@@ -9,7 +9,7 @@ The original code is from https://medium.com/datamindedbe/run-spark-jobs-on-azur
 Clone this repo.
 
 ### Azure Portal
-[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fjhchein%2Fspark-on-batch-example%2Fmaster%2Fazuredeploy.json)
+[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fjhchein%2Fspark-on-batch-example%2Fadd-arm-template%2Fazuredeploy.json)
 
 In your Azure Portal
 * Create an azure batch account
